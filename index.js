@@ -1,37 +1,19 @@
-var http = require("http"),
-    url = require("url"),
-    path = require("path"),
-    fs = require("fs"),
-    port = process.argv[2] || 80;
+const express = require('express');
+const bodyParser = require('body-parser')
+const path = require('path');
+const app = express();
+const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 
-http.createServer(function(request, response) {
+// Don't redirect if the hostname is `localhost:port` or the route is `/insecure`
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
+app.use(express.static(path.join(__dirname, 'build')));
 
-  var uri = url.parse(request.url).pathname
-    , filename = path.join(process.cwd(), uri);
+app.get('/ping', function (req, res) {
+  return res.send('pong');
+});
 
-  fs.exists(filename, function(exists) {
-    if(!exists) {
-      response.writeHead(404, {"Content-Type": "text/plain"});
-      response.write("404 Not Found\n");
-      response.end();
-      return;
-    }
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
-    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
-
-    fs.readFile(filename, "binary", function(err, file) {
-      if(err) {        
-        response.writeHead(500, {"Content-Type": "text/plain"});
-        response.write(err + "\n");
-        response.end();
-        return;
-      }
-
-      response.writeHead(200);
-      response.write(file, "binary");
-      response.end();
-    });
-  });
-}).listen(parseInt(port, 10));
-
-console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
+app.listen(process.env.PORT || 8080);
