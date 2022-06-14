@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./js/merge-images.js"></script>
+  <title>Astrology Example</title>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="buttons_container">
+            <button id="variant_1">Varian 1</button>
+            <button id="variant_2">Varian 2</button>
+            <button id="variant_3">Varian 3</button>
+            <button id="variant_4">Varian 4</button>
+        </div>
+        <div class="image_container">
+            <img id="main_image" src="https://zoof-bucket-for-test.s3.eu-central-1.amazonaws.com/astro.png"/>
+            <img id="img_astro" style="display: none;" />
+            <img id="img_template" style="display: none;" />
+        </div>
+    </div>
+</body>
+
+<script>
+    const baseImage = "https://zoof-bucket-for-test.s3.eu-central-1.amazonaws.com/astro.png"
+    const astroImagePos = { x: 0, y: 0 }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const buttonVariant1 = document.getElementById('variant_1')
+        const buttonVariant2 = document.getElementById('variant_2')
+        const buttonVariant3 = document.getElementById('variant_3')
+        const buttonVariant4 = document.getElementById('variant_4')
+
+        //loadImages()
+
+        if (buttonVariant1) {
+            buttonVariant1.addEventListener('click', () => {
+                const imgParams = {
+                    day: 3,
+                    year: 1989,
+                    month: 3,
+                    hour: 6,
+                    min: 16,
+                    lat: -22.90684,
+                    lon: -43.1728,
+                    tzone: -3,
+                    highlited_sign: "#f7d361",
+                    highlited_sign_bg: "#f7d361",
+                    theme_name: "WHEEL_CHART_THEME_PENDANT",
+                    image_type: "PNG",
+                    stroke_only: true
+                }
+                getAstrologyImage(imgParams)
+            })
+        }
+    })
+
+    const margeAstroImage = astroImageUrl => {
+        console.log([
+            { src: baseImage, x: 0, y: 0 },
+            { src: astroImageUrl, ...astroImagePos }
+        ])
+
+
+        return mergeImages([
+            { src: baseImage, x: 0, y: 0 },
+            //{ src: astroImageUrl, ...astroImagePos }
+        ]).then(b64 => document.getElementById('main_image').src = b64)
+    }
+
+    const getAstrologyImage = imgParams => {
+        fetch(
+            "https://json.astrologyapi.com/v1/natal_wheel_chart",
+            {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'authorization': 'Basic ' + btoa("616937:3070ee7920305f9a0c3b39a7451c8ade"),
+                },
+                method: "POST",
+                body: JSON.stringify(imgParams)
+            }
+        )
+        .then((data) => {
+            return data.json()
+        })
+        .then((data) => {
+            if (data.status && margeAstroImage) {
+                return margeAstroImage(data.chart_url)
+            } else {
+                throw 'Something wrong with astro image'
+            }
+        })
+        .then(base64 => {
+            console.log('DONE!', base64)
+        })
+        .catch(err => console.error(err))
+    }
+</script>
+
+<style>
+    .main_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1440px;
+        min-height: 100vh;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons_container {
+        width: 50%;
+        padding: 40px;
+    }
+
+    .image_container {
+        width: 50%;
+        padding: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image_container > img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+
+    .buttons_container > button:not(:first-child) {
+        margin-left: 10px;
+    }
+</style>
+</html>
