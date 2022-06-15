@@ -2,9 +2,9 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Astrology Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astrology Example</title>
 </head>
 
 <body>
@@ -27,18 +27,96 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="builder-field-group time _pb-1">
+                <div class="date-picker">
+                    <label>What is the time of the birth? <span class="red">*</span></label>
+                    <div class="input">
+                        <span class="icon icon-time"></span>
+                        <select class="hour" style="background-color: rgb(255, 255, 255);">
+                            <option value="0">00 (12AM)</option><option value="1">01 (AM)</option><option value="2">02 (AM)</option><option value="3">03 (AM)</option><option value="4">04 (AM)</option><option value="5">05 (AM)</option><option value="6">06 (AM)</option><option value="7">07 (AM)</option><option value="8">08 (AM)</option><option value="9">09 (AM)</option><option value="10">10 (AM)</option><option value="11">11 (AM)</option><option value="12">12 (12PM)</option><option value="13">13 (1PM)</option><option value="14">14 (2PM)</option><option value="15">15 (3PM)</option><option value="16">16 (4PM)</option><option value="17">17 (5PM)</option><option value="18">18 (6PM)</option><option value="19">19 (7PM)</option><option value="20">20 (8PM)</option><option value="21">21 (9PM)</option><option value="22">22 (10PM)</option><option value="23">23 (11PM)</option>
+                        </select>
+                        <select class="min" style="background-color: rgb(255, 255, 255);">
+                            <option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                        </select>
+                        <span style="display:none" class="icon astro-gmt"></span>
+                        <select style="display: none; background-color: rgb(255, 255, 255);" class="gmt"></select>
+                    </div>
+                    <div class="input unknown">
+                        <div class="background">
+                            <label>I DON'T KNOW THE TIME:</label>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="unknowntimeswitch">
+                                <label class="onoffswitch-label" for="unknowntimeswitch"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
         <div class="image_container">
+            <div class="loading_container">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <g transform="rotate(0 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(30 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(60 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(90 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(120 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(150 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(180 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(210 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(240 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(270 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(300 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g><g transform="rotate(330 50 50)">
+                      <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#acacac">
+                        <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animate>
+                      </rect>
+                    </g>
+                    </svg>
+            </div>
             <img id="main_image" src="https://zoof-bucket-for-test.s3.eu-central-1.amazonaws.com/astro.png"/>
-            <input type='file' id="imgInp" style="display: none;"/>
+            <img id="second_image" />
         </div>
     </div>
 </body>
 
 <script>
-    const superSecretCode = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWQzZGU2MGY5YTFjYjAxZWNkY2M4OGY5MzQ2ZWJlZjQ2NTM5Zjc2MDE4NDE3ZmM5ZDE1MTk4MDc1MzEyNTkzYmNhYWQ1ZmMyMTZjY2FhMzkiLCJpYXQiOjE2MjU5NjM2MTksIm5iZiI6MTYyNTk2MzYxOSwiZXhwIjoxNjU3NDk5NjE5LCJzdWIiOiI2MzA2MiIsInNjb3BlcyI6WyJyZWFkX3Nob3AiLCJyZWFkX29yZGVycyIsInJlYWRfcHJvZHVjdF90ZW1wbGF0ZXMiLCJyZWFkX3RyYW5zZm9ybWF0aW9ucyIsIndyaXRlX2FydHdvcmsiLCJ3cml0ZV9za3VzIiwid3JpdGVfb3JkZXJzIl19.vzt2E8nFZUtfj68gD9EEmztNNr9Tvpwjwn3SSK8wC0r-_KtFiiwrnEG2WR9FRhTPTkJVQrAgGcLbwKO3s6sccXxLgQKZCKGLp5MHGU-_T2nA1BbKpZk5P87ilewoS_zc3r2Pah3x5_4xnOvFuHWR_zUq2ng599Xizbk4a97nvtqvnBuJhZ2M3yzX6WWRwXMDmT8UA0ql9JgHACYTK3s1GvcZfLDbjwNPsVCKSMgcTkX8QYZFbmtwgJ14rY1tW38yLq8aC5gB1Cv49DAMma8Jsz0h8ZzNRnmzRrnX-6MRuF-vf7jk4sZPvvtkVnt7ZRgGYdxx1TKGyOkAmMYgFLYgx6ibWeNEpPyynfhAFfl1zn5DsE9M3Xo08bFyvih-LeyujXiuMELixOoJsd191EAvSXlkyUAUZmejvFScVXbrByaNG6PyuuJMr3BjoqKQk530dUNGvPM53n7wmrtrp6ct6budHjRDtUV7sihECm06rPXnPhBisyK41950RH8rSfar5ERyV5Wx-9KXyWYotT4V3owSlISTL8P3BZMd3HGr3BT0ToqcG4dtfbXfUWkU3pzV_F_Y-8grCx2yxVscwyuewNtZzjiCA77IHl6HdYrnYkzvlGOBCRWl5E67-2Q-aW-HYXFYcXj19-TGcX22DvnnY-njZc5hWPVFl--D3QH_f1o"
-    const baseImageApi = "https://api.shineon.com/v1/renders/9475/make"
-    
+    let mainImageLoaded = false
+    let secondImageLoaded = false
+
     let imgParams = {
         day: 1,
         year: 1900,
@@ -48,8 +126,8 @@
         lat: -22.90684,
         lon: -43.1728,
         tzone: -3,
-        highlited_sign: "#f7d361",
-        highlited_sign_bg: "#f7d361",
+        highlited_sign: "#C0C0C0",
+        highlited_sign_bg: "#C0C0C0",
         theme_name: "WHEEL_CHART_THEME_PENDANT",
         image_type: "PNG",
         stroke_only: true
@@ -59,6 +137,19 @@
         const yearSelect = document.querySelector('.year')
         const monthSelect = document.querySelector('.month')
         const daySelect = document.querySelector('.day')
+
+        const mainImage = document.querySelector('#main_image')
+        const secondImage = document.querySelector('#second_image')
+
+        mainImage.addEventListener('load', () => {
+            mainImageLoaded = true
+            stopLoaing()
+        })
+
+        secondImage.addEventListener('load', () => {
+            secondImageLoaded = true
+            stopLoaing()
+        })
 
         yearSelect.addEventListener('change', data => {
             imgParams.year = Number(data.target.value)
@@ -78,7 +169,26 @@
         getAstrologyImage(imgParams)
     })
     
-    const getAstrologyImage = imgParams => {
+    const startLoading = () => {
+        const loadingElement = document.querySelector(".loading_container")
+
+        if (loadingElement) {
+            loadingElement.style.visibility = "visible"
+        }
+    }
+
+    const stopLoaing = () => {
+        console.log('stopLoaing')
+        const loadingElement = document.querySelector(".loading_container")
+        
+        if (loadingElement && mainImageLoaded == true && secondImageLoaded == true) {
+            loadingElement.style.visibility = "hidden"
+        }
+    }
+
+    const getAstrologyImage = imgParams => {    
+        secondImageLoaded = false
+        startLoading()
         fetch(
             'https://json.astrologyapi.com/v1/natal_wheel_chart',
             {
@@ -96,32 +206,39 @@
         })
         .then(data => {
             if (data.status) {
-                return fetch(
-                    'https://api.shineon.com/v1/renders/9475/make',
-                    {
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json',
-                            'Authorization': 'Bearer ' +  btoa(superSecretCode),
-                        },
-                        mode: 'cors',
-                        credentials: 'include',
-                        method: 'POST',
-                        body: JSON.stringify({ src: data.chart_url })
-                    }
-                )
+                const secondImage = document.getElementById('second_image')
+
+                if (secondImage) {
+                    secondImage.src = data.chart_url
+                }
             } else {
                 throw 'Something wrong with astro image'
             }
-        })
-        .then(data => {
-            console.log('data => ', data)
         })
         .catch(err => console.error(err))
     }
 </script>
 
 <style>
+    html, body {
+        font-family: "Exo 2";
+    }
+
+    .loading_container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #808080f0;
+        z-index: 3;
+        border-radius: 8px;
+        visibility: hidden;        
+    }
+
     .main_container {
         display: flex;
         align-items: center;
@@ -139,18 +256,33 @@
     }
 
     .image_container {
-        width: 50%;
-        padding: 40px;
+        margin: 40px;
+        position: relative;
 
         display: flex;
         align-items: center;
         justify-content: center;
+
+        border-radius: 8px;
+        background-color: #f7f7f7;
+        box-shadow: 0px 10px 13px -7px #000000, -1px 7px 12px 4px rgb(0 0 0 / 37%);
     }
 
     .image_container > img {
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         max-width: 600px;
+    }
+
+    #main_image {
+        z-index: 2;
+    }
+
+    #second_image {
+        position: absolute;
+        z-index: 1;
+        width: 39.7%;
+        bottom: 22.25%;
+        left: 31.05%;
     }
 
     .builder-field-group {
@@ -237,6 +369,127 @@
         -moz-appearance: none;
         text-indent: 0.01px;
         text-overflow: "";
+    }
+
+    ._pb-1 {
+        padding-bottom: 0.25rem;
+    }
+
+    .builder-field-group .input .astro-gmt, .builder-field-group .input .icon-time {
+        margin-top: 11px;
+        margin-right: 3px;
+    }
+
+    [class^=icon-]:before, [class*=" icon-"]:before {
+        font-family: ephemeris;
+        font-style: normal;
+        font-weight: 400;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: 0.2em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        margin-left: 0.15em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .builder-field-group .input select.hour, .builder-field-group .input select.min {
+        width: 22%;
+        margin-right: 5px;
+    }
+
+    .builder-field-group .input {
+        position: relative;
+        display: flex;
+    }
+
+    .date-picker .input.unknown {
+        margin-top: -15px;
+        margin-bottom: 15px;
+    }
+
+    .input .background {
+        width: 100%;
+    }
+
+    .theme .background, .input .background {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #fff;
+        margin-top: 10px;
+        border-radius: 11px;
+        border: 1px solid #efefef;
+    }
+
+    .background label {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 7px;
+    }
+
+    input .background .onoffswitch {
+        display: inline-block;
+    }
+
+    .onoffswitch {
+        position: relative;
+        width: 60px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .onoffswitch-label:before {
+        content: "";
+        display: block;
+        width: 36px;
+        height: 36px;
+        margin: 0;
+        background: #FFFFFF;
+        position: absolute;
+        bottom: 0px;
+        right: 22px;
+        border: 2px solid #E3E3E3;
+        border-radius: 36px;
+        transition: all .3s ease-in 0s;
+    }
+
+    .onoffswitch-checkbox {
+        display: none!important;
+    }
+
+    .theme .background label, .input .background label {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 7px;
+    }
+
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        height: 36px;
+        padding: 0;
+        line-height: 36px;
+        border: 2px solid #E3E3E3;
+        border-radius: 36px;
+        background-color: #fff;
+        transition: background-color .3s ease-in;
+        margin-top: 0!important;
+    }
+
+    @font-face {
+        font-family: "Ssw Fontello";
+        src: url("//cdn.shopify.com/s/files/1/0071/8857/8356/t/81/assets/ssw-fontello.woff?v=8128985819771460921635359306") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: fallback;
     }
 </style>
 </html>
